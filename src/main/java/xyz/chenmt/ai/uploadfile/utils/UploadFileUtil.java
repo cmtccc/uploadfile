@@ -24,7 +24,8 @@ public class UploadFileUtil {
                 if (null != file) {
                     String filename = file.getOriginalFilename();
                     if (!"".equals(filename.trim())) {
-                        String name=System.currentTimeMillis()+filename.substring(filename.lastIndexOf("."));
+//                        String name=System.currentTimeMillis()+filename.substring(filename.lastIndexOf("."));
+                        String name=System.currentTimeMillis()+filename;
                         File newFile = new File(newPath+name);
                         FileOutputStream os = new FileOutputStream(newFile);
                         os.write(file.getBytes());
